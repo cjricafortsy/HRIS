@@ -281,3 +281,20 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 //Login Account
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the values entered by the user
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Check if the username and password are correct (for demonstration purposes only)
+        if (username === "admin" && password === "admin") {
+            alert("Login successful!");
+            // Redirect to another page or perform any other action upon successful login
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    });
+});
